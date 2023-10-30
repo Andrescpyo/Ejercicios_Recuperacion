@@ -1,0 +1,42 @@
+@startuml
+
+    class Libreria{
+        Object[] Libreria
+        Mostrar_Libreria()
+    }
+
+    abstract Recuros_Biliograficos{
+        nombre
+        autor
+        fecha_publicacion
+        Obtener_tipo()
+        entregar_recurso()
+    }
+
+    class Libro{
+        genero
+        editorial
+    }
+
+    class Revista{
+        contenidos
+        periodicidad
+    }
+
+    class Periodico{
+        tematica
+        secciones
+    }
+
+    class Pelicula{
+        genero
+        duracion
+    }
+
+    Libreria <|-- Recuros_Biliograficos
+    Recuros_Biliograficos <|-- Libro
+    Recuros_Biliograficos <|-- Revista
+    Recuros_Biliograficos <|-- Periodico
+    Recuros_Biliograficos <|-- Pelicula
+
+@enduml
